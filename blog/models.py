@@ -10,6 +10,7 @@ from wagtail.search import index
 
 # Create your models here.
 class BlogIndexPage(Page):
+    max_count = 1
     featured = StreamField([
         ('page', blocks.PageChooserBlock())
     ], blank=True)

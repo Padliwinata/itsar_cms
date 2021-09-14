@@ -8,6 +8,11 @@ from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.images.blocks import ImageChooserBlock
 
 
+class HomeExample(Page):
+    template = 'home/home_example.html'
+    max_count = 1
+
+
 class HomePage(Page):
     template = 'home/home_page.html'
     max_count = 1

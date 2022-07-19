@@ -36,6 +36,7 @@ class HomePage(Page):
 
     phone = models.CharField(max_length=20, null=True, blank=False)
     email = models.EmailField(null=True, blank=False)
+    address = models.CharField(max_length=100, null=True, blank=False)
 
     content = StreamField([
         ('solid_three', blocks.StructBlock([
@@ -109,5 +110,6 @@ class HomePage(Page):
         FieldPanel('email'),
         ImageChooserPanel('banner_image'),
         PageChooserPanel('blog_index'),
-        StreamFieldPanel('content')
+        StreamFieldPanel('content'),
+        FieldPanel('address')
     ]
